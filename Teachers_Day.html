@@ -30,7 +30,6 @@ body{
 .float{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
 .float span{position:absolute;bottom:-60px;font-size:22px;opacity:.0;animation:rise linear infinite}
 @keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.5}90%{opacity:.35}100%{transform:translateY(-115vh) rotate(360deg);opacity:0}}
-
 /* ---------- LOGIN ---------- */
 #login{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;padding:24px;
   transition:opacity .7s ease,transform .7s ease}
@@ -60,7 +59,6 @@ body{
 .err{min-height:22px;margin-top:10px;font-size:.86rem;color:#ffb3c0}
 .shake{animation:shake .45s}
 @keyframes shake{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
-
 /* ---------- MAIN ---------- */
 #main{position:relative;z-index:2;display:none}
 #main.show{display:block;animation:fadeUp .9s ease both}
@@ -75,7 +73,6 @@ body{
 .to{margin-top:14px;color:var(--muted);font-size:.95rem}
 .name{font-family:var(--serif);font-style:italic;font-size:clamp(1.8rem,6.5vw,2.8rem);margin-top:4px}
 .divider{width:90px;height:3px;border-radius:3px;margin:26px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-
 section{margin:34px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:28px 26px;
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 18px 50px rgba(0,0,0,.3)}
@@ -83,7 +80,6 @@ section{margin:34px 0}
 .sec-sub{color:var(--muted);font-size:.9rem;margin-bottom:18px}
 .msg-en{font-size:1.04rem;line-height:1.85;color:#ece8ff}
 .msg-ur{direction:rtl;text-align:right;font-family:var(--urdu);font-size:1.18rem;line-height:2.5;margin-top:20px;padding-top:20px;border-top:1px dashed var(--line);color:#fff6dc}
-
 /* quotes carousel */
 .quotes{position:relative;min-height:210px}
 .q{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(10px);
@@ -98,14 +94,12 @@ section{margin:34px 0}
 .dots button.on{width:26px;border-radius:9px;background:var(--gold)}
 .arrows button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;font-size:1rem;margin-left:8px}
 .arrows button:hover{border-color:var(--gold);color:var(--gold)}
-
 /* poetry */
 .poems{display:grid;gap:16px}
 .poem{direction:rtl;text-align:center;font-family:var(--urdu);font-size:clamp(1.15rem,4.4vw,1.4rem);line-height:2.7;padding:24px 18px;border-radius:22px;
   background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid var(--line);position:relative;overflow:hidden}
 .poem::after{content:"";position:absolute;inset:auto -30% -60% auto;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(244,201,93,.18),transparent 70%)}
 .poem small{display:block;font-size:.8rem;color:var(--muted);margin-top:4px;line-height:1.6}
-
 .closing{text-align:center;padding:30px 20px 70px}
 .closing .big{font-family:var(--serif);font-size:clamp(1.5rem,5.5vw,2.2rem);line-height:1.35}
 .closing .ur{font-family:var(--urdu);font-size:1.3rem;line-height:2.4;margin-top:12px;color:var(--gold2)}
@@ -118,10 +112,8 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
 </style>
 </head>
 <body>
-
 <div class="float" id="float" aria-hidden="true"></div>
 <canvas id="confetti" aria-hidden="true"></canvas>
-
 <!-- ============ LOGIN ============ -->
 <div id="login">
   <form class="lock-card" id="loginForm" autocomplete="off">
@@ -141,11 +133,9 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
     <div class="hint" id="hint"></div>
   </form>
 </div>
-
 <!-- ============ MAIN ============ -->
 <main id="main">
   <div class="wrap">
-
     <header class="hero">
       <span class="badge">World Teachers' Day &middot; 5 October</span>
       <h1>Happy Teachers' Day</h1>
@@ -154,7 +144,6 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
       <div class="name" id="teacherName">Respected Sir / Madam</div>
       <div class="divider"></div>
     </header>
-
     <section class="card">
       <h2 class="sec-title">A Message From My Heart</h2>
       <p class="sec-sub">Words are small, but the feeling is big.</p>
@@ -170,7 +159,6 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
         میری ہر کامیابی میں آپ کی محنت اور دعاؤں کا حصہ ہے۔ اللہ آپ کو صحت، عزت اور ڈھیروں خوشیاں عطا فرمائے۔ آمین
       </p>
     </section>
-
     <section class="card">
       <h2 class="sec-title">Words About Teachers</h2>
       <p class="sec-sub">Some thoughts that say it better than I can.</p>
@@ -180,7 +168,6 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
         <div class="arrows"><button id="prev" aria-label="Previous quote">&#8592;</button><button id="next" aria-label="Next quote">&#8594;</button></div>
       </div>
     </section>
-
     <section>
       <div class="card" style="margin-bottom:16px">
         <h2 class="sec-title">اردو اشعار</h2>
@@ -211,7 +198,6 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
         </div>
       </div>
     </section>
-
     <footer class="closing">
       <div class="big">Thank you for shaping who I am today.</div>
       <div class="ur" lang="ur">شکریہ استادِ محترم، آپ کا احسان ہمیشہ یاد رہے گا۔</div>
@@ -221,23 +207,20 @@ canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
     </footer>
   </div>
 </main>
-
 <script>
 /* =====================  EDIT HERE  ===================== */
 var CONFIG = {
-  password : "thankyou",                      // password to open the page (not case sensitive)
-  hint     : "Hint: the two words we should say to every teacher (no space)",
-  teacher  : "Respected Sir / Madam",         // teacher's name, for example "Sir Ahmed" or "Miss Sana"
-  from     : "Muhammad Hadi",                 // your name at the bottom
-  whatsapp : ""                               // optional, digits only with country code, for example 923001234567 (leave empty to hide)
+  password : "1234",                          // ← Password ab 1234 hai
+  hint     : "Hint: 1234",                    // ← Hint bhi update kar diya
+  teacher  : "Respected Sir / Madam",         // teacher's name (change kar sakte ho)
+  from     : "Muhammad Hadi",                 // your name
+  whatsapp : ""                               // optional WhatsApp number
 };
 /* ======================================================= */
-
 (function(){
   var qs = new URLSearchParams(location.search);
   if(qs.get('name')) CONFIG.teacher = qs.get('name');
   if(qs.get('from')) CONFIG.from = qs.get('from');
-
   document.getElementById('teacherName').textContent = CONFIG.teacher;
   document.getElementById('fromName').textContent   = CONFIG.from;
   document.getElementById('hint').textContent       = CONFIG.hint;
@@ -247,97 +230,7 @@ var CONFIG = {
     wa.style.display='block';
     wa.href='https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent("Thank you so much for the Teachers' Day message! 💛");
   }
-
   /* floating icons */
   var fl=document.getElementById('float'), icons=['📚','✏️','⭐','🍎','💛','🎓'];
   for(var i=0;i<16;i++){
     var s=document.createElement('span');
-    s.textContent=icons[i%icons.length];
-    s.style.left=(Math.random()*100)+'vw';
-    s.style.fontSize=(16+Math.random()*18)+'px';
-    s.style.animationDuration=(14+Math.random()*16)+'s';
-    s.style.animationDelay=(-Math.random()*20)+'s';
-    fl.appendChild(s);
-  }
-
-  /* login */
-  var form=document.getElementById('loginForm'), pw=document.getElementById('pw'), err=document.getElementById('err');
-  document.getElementById('eye').addEventListener('click',function(){
-    var show = pw.type==='password'; pw.type = show?'text':'password'; this.textContent = show?'🙈':'👁';
-  });
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(pw.value.trim().toLowerCase() === String(CONFIG.password).toLowerCase()){
-      err.textContent='';
-      document.getElementById('login').classList.add('hide');
-      var m=document.getElementById('main'); m.classList.add('show');
-      window.scrollTo(0,0);
-      setTimeout(function(){document.getElementById('login').style.display='none'},800);
-      burst(160);
-    } else {
-      err.textContent='That is not the right password. Please try again 🙂';
-      form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake');
-      pw.select();
-    }
-  });
-
-  /* quotes */
-  var Q=[
-    {q:"A good teacher can inspire hope, ignite the imagination, and instill a love of learning.",a:"Brad Henry"},
-    {q:"Teachers affect eternity; no one can tell where their influence stops.",a:"Henry Adams"},
-    {q:"The art of teaching is the art of assisting discovery.",a:"Mark Van Doren"},
-    {q:"The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher inspires.",a:"William Arthur Ward"},
-    {q:"What the teacher is, is more important than what he teaches.",a:"Karl Menninger"},
-    {q:"Education is the most powerful weapon which you can use to change the world.",a:"Nelson Mandela"},
-    {q:"A teacher takes a hand, opens a mind, and touches a heart.",a:"Unknown"}
-  ];
-  var box=document.getElementById('quotes'), dots=document.getElementById('dots'), cur=0, timer;
-  Q.forEach(function(it,i){
-    var d=document.createElement('div'); d.className='q'+(i===0?' on':'');
-    var b=document.createElement('blockquote'); b.textContent=it.q;
-    var c=document.createElement('cite'); c.textContent='— '+it.a;
-    d.appendChild(b); d.appendChild(c); box.appendChild(d);
-    var dot=document.createElement('button'); dot.setAttribute('aria-label','Quote '+(i+1));
-    if(i===0) dot.className='on'; dot.addEventListener('click',function(){go(i,true)}); dots.appendChild(dot);
-  });
-  function go(n,manual){
-    var qs2=box.children, ds=dots.children;
-    qs2[cur].classList.remove('on'); ds[cur].classList.remove('on');
-    cur=(n+Q.length)%Q.length;
-    qs2[cur].classList.add('on'); ds[cur].classList.add('on');
-    if(manual) restart();
-  }
-  function restart(){clearInterval(timer);timer=setInterval(function(){go(cur+1)},6500)}
-  document.getElementById('prev').addEventListener('click',function(){go(cur-1,true)});
-  document.getElementById('next').addEventListener('click',function(){go(cur+1,true)});
-  restart();
-
-  /* confetti */
-  var cv=document.getElementById('confetti'), ctx=cv.getContext('2d'), parts=[], run=false;
-  function size(){cv.width=innerWidth;cv.height=innerHeight}
-  size(); addEventListener('resize',size);
-  var colors=['#f4c95d','#ffe29a','#ff8fa3','#8ec5ff','#b69cff','#ffffff'];
-  function burst(n){
-    for(var i=0;i<n;i++){
-      parts.push({x:innerWidth/2+(Math.random()-.5)*120,y:innerHeight*.45,
-        vx:(Math.random()-.5)*14,vy:-Math.random()*14-4,g:.28+Math.random()*.15,
-        w:6+Math.random()*7,h:4+Math.random()*6,r:Math.random()*6,vr:(Math.random()-.5)*.4,
-        c:colors[(Math.random()*colors.length)|0],life:140+Math.random()*80});
-    }
-    if(!run){run=true;requestAnimationFrame(tick)}
-  }
-  function tick(){
-    ctx.clearRect(0,0,cv.width,cv.height);
-    parts=parts.filter(function(p){return p.life>0&&p.y<cv.height+30});
-    parts.forEach(function(p){
-      p.vy+=p.g;p.x+=p.vx;p.y+=p.vy;p.vx*=.992;p.r+=p.vr;p.life--;
-      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.globalAlpha=Math.min(1,p.life/40);
-      ctx.fillStyle=p.c;ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);ctx.restore();
-    });
-    if(parts.length) requestAnimationFrame(tick); else run=false;
-  }
-  document.getElementById('thanksBtn').addEventListener('click',function(){burst(140)});
-})();
-</script>
-</body>
-</html>
